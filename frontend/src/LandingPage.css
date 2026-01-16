@@ -1,0 +1,354 @@
+/* Tech-y Landing Page with Animations */
+
+.landing-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.26), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.2), transparent 24%),
+    #eef1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient background */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Background animated shapes */
+.bg-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.shape {
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -50px;
+  animation: float 20s ease-in-out infinite;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: 10%;
+  animation: float 15s ease-in-out infinite reverse;
+}
+
+.shape-3 {
+  width: 400px;
+  height: 400px;
+  top: 20%;
+  right: -150px;
+  animation: float 25s ease-in-out infinite;
+}
+
+.shape-4 {
+  width: 150px;
+  height: 150px;
+  bottom: 20%;
+  left: 15%;
+  animation: float 18s ease-in-out infinite reverse;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.particle-1 {
+  width: 8px;
+  height: 8px;
+  top: 20%;
+  left: 20%;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.particle-2 {
+  width: 12px;
+  height: 12px;
+  top: 60%;
+  right: 25%;
+  animation: pulse 4s ease-in-out infinite 0.5s;
+}
+
+.particle-3 {
+  width: 6px;
+  height: 6px;
+  bottom: 30%;
+  left: 30%;
+  animation: pulse 3.5s ease-in-out infinite 1s;
+}
+
+.particle-4 {
+  width: 10px;
+  height: 10px;
+  top: 40%;
+  right: 15%;
+  animation: pulse 4.5s ease-in-out infinite 1.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -30px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(240deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+/* Container with glassmorphism */
+.container {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  background: #ffffff;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 4rem 3rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* Fade-in animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-fade-in-delay-1 {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.animate-fade-in-delay-3 {
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.animate-fade-in-delay-4 {
+  animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+/* Typography */
+.app-name {
+  font-size: 3.3rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.value-prop {
+  font-size: 1.4rem;
+  color: #0f172a;
+  line-height: 1.6;
+  margin: 0 0 3rem 0;
+  font-weight: 500;
+}
+
+/* CTA Button with glow effect */
+.cta-button {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #ec4899 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  margin-bottom: 5rem;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.3);
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.step {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(236, 72, 153, 0.18));
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.15);
+  animation: stepPulse 2s ease-in-out infinite;
+}
+
+.step:nth-child(1) .step-number {
+  animation-delay: 0s;
+}
+
+.step:nth-child(2) .step-number {
+  animation-delay: 0.3s;
+}
+
+.step:nth-child(3) .step-number {
+  animation-delay: 0.6s;
+}
+
+@keyframes stepPulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.step p {
+  color: #0f172a;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Footer */
+.footer {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.footer a {
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #0f172a;
+}
+
+.separator {
+  margin: 0 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 3rem 2rem;
+  }
+
+  .app-name {
+    font-size: 2.5rem;
+  }
+
+  .value-prop {
+    font-size: 1.25rem;
+  }
+
+  .steps {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .cta-button {
+    margin-bottom: 4rem;
+    padding: 1rem 2rem;
+  }
+
+  .shape {
+    display: none;
+  }
+}

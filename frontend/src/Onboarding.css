@@ -1,0 +1,410 @@
+/* ONBOARDING PAGE
+   Same tech-y gradient + glassmorphism as landing page
+*/
+
+.onboarding-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.26), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.2), transparent 24%),
+    #eef1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient background – shared with landing */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Background animated shapes */
+.bg-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.shape {
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -50px;
+  animation: float 20s ease-in-out infinite;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: 10%;
+  animation: float 15s ease-in-out infinite reverse;
+}
+
+.shape-3 {
+  width: 400px;
+  height: 400px;
+  top: 20%;
+  right: -150px;
+  animation: float 25s ease-in-out infinite;
+}
+
+.shape-4 {
+  width: 150px;
+  height: 150px;
+  bottom: 20%;
+  left: 15%;
+  animation: float 18s ease-in-out infinite reverse;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.particle-1 {
+  width: 8px;
+  height: 8px;
+  top: 20%;
+  left: 20%;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.particle-2 {
+  width: 12px;
+  height: 12px;
+  top: 60%;
+  right: 25%;
+  animation: pulse 4s ease-in-out infinite 0.5s;
+}
+
+.particle-3 {
+  width: 6px;
+  height: 6px;
+  bottom: 30%;
+  left: 30%;
+  animation: pulse 3.5s ease-in-out infinite 1s;
+}
+
+.particle-4 {
+  width: 10px;
+  height: 10px;
+  top: 40%;
+  right: 15%;
+  animation: pulse 4.5s ease-in-out infinite 1.5s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -30px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(240deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+/* Glassy container */
+.onboarding-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  z-index: 10;
+  background: #ffffffe1;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3.5rem 3rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* Fade-in animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-fade-in-delay-1 {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.animate-fade-in-delay-3 {
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+/* Typography */
+.onboarding-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.01em;
+}
+
+.onboarding-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin: 0 0 2.5rem 0;
+}
+
+/* Layout for the 3 steps */
+.onboarding-grid {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Step cards */
+.onboarding-step-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1 1 0;
+  height: 100%;
+  min-width: 0;
+  color: #0f172a;
+}
+
+.onboarding-step-3 {
+  max-width: 320px;
+}
+
+/* Little round number badge */
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(236, 72, 153, 0.18));
+  border: 1px solid rgba(102, 126, 234, 0.25);
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.18);
+}
+
+.step-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.35;
+  min-height: 4.6rem; /* keep illustration start aligned across varying title lengths */
+}
+
+.step-text {
+  font-size: 0.98rem;
+  margin: 0 0 1.25rem 0;
+  line-height: 1.6;
+}
+
+/* Placeholder "image" – matte rounded box */
+.step-illustration {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: 220px;
+  border-radius: 18px;
+  background: radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.5),
+      transparent 50%
+    ),
+    rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0.15rem;
+  flex: 1;
+}
+
+.step-illustration-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* iCal URL form */
+.ical-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ical-label {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.ical-input {
+  width: 100%;
+  min-height: 120px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  background: #f2f4fb;
+  padding: 0.85rem 0.95rem;
+  font-size: 0.95rem;
+  color: #0f172a;
+  outline: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.ical-input::placeholder {
+  color: #94a3b8;
+}
+
+.ical-input:focus {
+  border-color: rgba(102, 126, 234, 0.5);
+  box-shadow: 0 0 0 1px rgba(102, 126, 234, 0.35),
+    0 10px 28px rgba(102, 126, 234, 0.1);
+}
+
+.error-text {
+  font-size: 0.85rem;
+  color: #b91c1c;
+}
+
+.success-text {
+  font-size: 0.9rem;
+  color: #0f9d58;
+}
+
+/* Reuse CTA styling but slightly smaller */
+.cta-button {
+  display: inline-block;
+  padding: 1.1rem 2.4rem;
+  background: linear-gradient(135deg, #667eea 0%, #ec4899 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.02rem;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.25);
+}
+
+.cta-button-small {
+  align-self: flex-start;
+  margin-top: 0.3rem;
+  padding-inline: 1.8rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .onboarding-container {
+    padding: 2.5rem 1.9rem;
+  }
+
+  .onboarding-title {
+    font-size: 2rem;
+  }
+
+  .onboarding-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .onboarding-grid {
+    flex-direction: column;
+  }
+
+  .onboarding-step-3 {
+    max-width: 100%;
+  }
+
+  .shape {
+    display: none;
+  }
+}

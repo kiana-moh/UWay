@@ -1,0 +1,11 @@
+{
+  "name": "project_team_29",
+  "version": "1.0.0",
+  "description": "Project Team 29 — frontend/tools",
+  "main": "src/shortestPath.js",
+  "scripts": {
+    "shortest": "node src/shortestPath.js",
+    "start": "npm run shortest"
+  }
+
+}

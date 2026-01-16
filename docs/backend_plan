@@ -1,0 +1,76 @@
+Backend Plan – Users & Accounts
+This document outlines my responsibilities (Sierra) for implementing the backend systems related to user accounts, authentication, and user-linked data. I am the backend developer responsible for all functionality in this area, including account creation, login, session handling, and endpoints for schedules and routes.
+
+1. Overview
+I am implementing:
+The User data model
+Sign Up and Login endpoints
+Secure password hashing
+Authentication and session/token verification
+Endpoints for schedule and route data
+Validation and access control for all /users/{user_id}/... operations
+This backend supports Sam and Kiana on the frontend and integrates with Wilson (schedule) and Quinn (routes).
+
+2. User Model
+Each user will be stored with the following fields:
+user_id — unique identifier
+email — provided during signup
+password_hash — securely hashed password
+created_at — timestamp
+This schema provides a stable foundation for authentication and linking user-specific data.
+
+3. Sign Up Endpoint
+Endpoint: POST /api/signup
+Input: { email, password }
+Process:
+Validate email and password
+Hash the password
+Insert new user into database
+Return success or appropriate error (e.g., email already exists)
+This endpoint creates a new user and sets up their account in the system.
+
+4. Login Endpoint
+Endpoint: POST /api/login
+Input: { email, password }
+Process:
+Look up user by email
+Compare provided password with stored password_hash
+If valid, generate a session token
+If invalid, return an authentication error
+The login endpoint allows the user to authenticate and gain access to their personalized data.
+
+5. Sessions & Authentication
+Once logged in, the user receives a session token. Authentication responsibilities include:
+Verifying the token on each request
+Attaching the authenticated user_id to the request
+Ensuring only the correct user can modify or view their own data
+Rejecting requests without proper authentication
+All schedule and route endpoints rely on this.
+
+6. User-Linked Data Endpoints
+These endpoints allow storing and retrieving user-specific data. They must always check authentication and ensure that the requesting user is the owner of the resource.
+
+6.1 Schedule Data (Wilson + Backend)
+Endpoint: POST /api/users/{user_id}/schedule
+Accepts schedule data
+Validates that the logged-in user matches the user_id
+Stores or updates schedule information
+6.2 Route Data (Quinn + Backend)
+Endpoint: POST /api/users/{user_id}/routes
+Accepts route configuration data
+Validates ownership
+Stores or updates routes linked to the user
+
+7. Frontend Integration (Sam & Kiana)
+The frontend will call all backend endpoints to:
+Sign up
+Log in
+Save schedule
+Save routes
+
+My responsibility is to provide:
+Clear and consistent JSON responses
+Reliable error formats
+Predictable authentication behavior
+Simple, documented request/response shapes
+This ensures smooth integration with the UI.

@@ -1,0 +1,44 @@
+Sprint Goal
+Get a working foundation with basic map display and simple schedule input.
+By end of week, we should be able to:
+
+1. View UW campus buildings on an interactive map
+2. Click buildings to see their info
+3. Add a single course through a form
+4. See the entered course displayed
+
+
+Week 1: Just get the project running (Initialize git and all the other dependencies)
+1. Set up React + TypeScript project with Vite:
+2. Set Up Development Environment
+- Create .env file for configuration
+- Set up ESLint and Prettier (basic configs)
+- Test that everyone can run npm run dev successfully
+- Create a simple "Hello World" page that renders
+Push initial commit to main branch
+
+
+Day 2: Define data structures and create mock data
+1. define typeScript interfaces for building and pathways
+2. create data for the buildings
+3. research Graph Algorithms (floyd warshall?)
+
+Day 3: Get map displaying with markers
+1. Basic Leaflet Map Display. 
+Day 4: Build simple course input form
+1. get building from course schedule. 
+
+Day 5: Integrate everything and test
+
+We will use Dijsiktra, multiple times. 
+
+Floyd-Warshall Algorithmns - multiple paths 
+//look intot algorithtms 
+
+have a graph treat each building as one node 
+graph 
+- issues on the issue board!
+- user stories (stakeholders)
+    - students - excepts some 
+    - developers - well organized files 
+
