@@ -1,6 +1,19 @@
 [
   {
     "term": "Winter 2026",
+    "course_code": "COMMST 100",
+    "course_name": "Interpersonal Communication",
+    "section": "010",
+    "component": "LEC",
+    "days": "MW",
+    "time": "11:30AM - 12:50PM",
+    "room": "RCH 106",
+    "instructor": "Shira Schwartz",
+    "start_date": "2026-01-05",
+    "end_date": "2026-04-06"
+  },
+  {
+    "term": "Winter 2026",
     "course_code": "CS 138",
     "course_name": "Intro Data Abstract & Implem",
     "section": "001",
@@ -180,19 +193,6 @@
     "instructor": "Bill Bishop",
     "start_date": "2026-03-19",
     "end_date": "2026-03-19"
-  },
-  {
-    "term": "Winter 2026",
-    "course_code": "ECE 124",
-    "course_name": "Digital Circuits & Systems",
-    "section": "104",
-    "component": "TUT",
-    "days": "T",
-    "time": "M 2:30PM - 3:20PM",
-    "room": "STC 0020",
-    "instructor": "To be Announced",
-    "start_date": "2026-01-05",
-    "end_date": "2026-02-13"
   },
   {
     "term": "Winter 2026",
@@ -547,38 +547,12 @@
   },
   {
     "term": "Winter 2026",
-    "course_code": "MATH 119",
-    "course_name": "Calculus 2 (Eng)",
-    "section": "201",
-    "component": "TST",
-    "days": "T",
-    "time": "M 8:30AM - 10:20AM",
-    "room": "TBA",
-    "instructor": "To be Announced",
-    "start_date": "2026-02-23",
-    "end_date": "2026-02-23"
-  },
-  {
-    "term": "Winter 2026",
     "course_code": "SE 102",
     "course_name": "Seminar",
     "section": "001",
     "component": "SEM",
     "days": "M",
     "time": "3:30PM - 4:20PM",
-    "room": "STC 0020",
-    "instructor": "Kami Vaniea",
-    "start_date": "2026-01-05",
-    "end_date": "2026-02-13"
-  },
-  {
-    "term": "Winter 2026",
-    "course_code": "SE 102",
-    "course_name": "Seminar",
-    "section": "001",
-    "component": "SEM",
-    "days": "M",
-    "time": "M 3:30PM - 4:20PM",
     "room": "STC 0020",
     "instructor": "Kami Vaniea",
     "start_date": "2026-01-05",

@@ -1,5 +1,6 @@
 GO!
 
+ 
 Go To
 Kiana Mohammadi
 My Academics
@@ -8,47 +9,38 @@ Search for Classes
 Enroll
  	My Class Schedule	 	 	|	 	 	Shopping Cart	 	 	|	 	 	Add	 	 	|	 	 	Drop	 	 	|	 	 	Swap	 	 	|	 	 	Edit	 	 	|	 	 	Term Information	 	 	|	 	 	Exam Information	 
 My Class Schedule
-			
 Select Display Option
 List View
 Weekly Calendar View
-			
 Winter 2026 | Undergraduate | University of Waterloo
-
 Group Box
-		
 Class Schedule Filter Options Collapsible section Class Schedule Filter Options 
-		
 Show Enrolled Classes
 Show Dropped Classes
 Show Waitlisted Classes
-
-	
 COMMST 100 - Interpersonal Communication
-		
 Status	Units	Grading	Grade	Deadlines
 Enrolled
 0.50
 Numeric Grading Basis
- Academic Calendar Deadlines
+Academic Calendar Deadlines
 Class Nbr	Section	Component	Days & Times	Room	Instructor	Start/End Date
 4333
-010	
+010
 LEC
 MW 11:30AM - 12:50PM
 RCH 106
 Shira Schwartz
 01/05/2026 - 04/06/2026
 CS 138 - Intro Data Abstract & Implem
-		
 Status	Units	Grading	Grade	Deadlines
 Enrolled
 0.50
 Numeric Grading Basis
- Academic Calendar Deadlines
+Academic Calendar Deadlines
 Class Nbr	Section	Component	Days & Times	Room	Instructor	Start/End Date
 5951
-001	
+001
 LEC
 TTh 10:00AM - 11:20AM
 EIT 1015
@@ -83,7 +75,7 @@ EIT 1015
 Mike Godfrey
 03/10/2026 - 03/10/2026
 6422
-102	
+102
 TUT
 F 12:30PM - 1:20PM
 RCH 305
@@ -97,7 +89,7 @@ RCH 305
 To be Announced
 03/02/2026 - 04/06/2026
 6522
-201	
+201
 TST
 Th 10:30AM - 12:20PM
 TBA
@@ -105,15 +97,14 @@ Scott King,
 Mike Godfrey
 02/26/2026 - 02/26/2026
 ECE 124 - Digital Circuits & Systems
-		
 Status	Units	Grading	Grade	Deadlines
 Enrolled
 0.50
 Numeric Grading Basis
- Academic Calendar Deadlines
+Academic Calendar Deadlines
 Class Nbr	Section	Component	Days & Times	Room	Instructor	Start/End Date
 4722
-002	
+002
 LEC
 MWF 8:30AM - 9:20AM
 STC 0020
@@ -155,7 +146,7 @@ EIT 1015
 Bill Bishop
 03/19/2026 - 03/19/2026
 4723
-104	
+104
 TUT
 M 2:30PM - 3:20PM
 STC 0020
@@ -169,7 +160,7 @@ STC 0020
 To be Announced
 03/02/2026 - 04/06/2026
 4725
-205	
+205
 LAB
 T 1:30PM - 4:20PM
 E2 2364
@@ -209,15 +200,14 @@ Hamidreza Nafissi,
 Kim Pope
 03/24/2026 - 03/24/2026
 ECE 140 - Linear Circuits
-		
 Status	Units	Grading	Grade	Deadlines
 Enrolled
 0.50
 Numeric Grading Basis
- Academic Calendar Deadlines
+Academic Calendar Deadlines
 Class Nbr	Section	Component	Days & Times	Room	Instructor	Start/End Date
 4891
-002	
+002
 LEC
 TTh 8:30AM - 9:50AM
 EIT 1015
@@ -259,7 +249,7 @@ EIT 1015
 Peter Levine
 03/12/2026 - 03/12/2026
 4921
-205	
+205
 LAB
 Th 1:30PM - 4:20PM
 E2 3344
@@ -294,7 +284,7 @@ E2 3344
 Mahmoud AL Saad
 04/02/2026 - 04/02/2026
 4925
-105	
+105
 TUT
 W 2:30PM - 4:20PM
 RCH 207
@@ -308,15 +298,14 @@ RCH 207
 To be Announced
 03/02/2026 - 04/06/2026
 ECE 192 - Eng Economics & Society Impact
-		
 Status	Units	Grading	Grade	Deadlines
 Enrolled
 0.25
 Numeric Grading Basis
- Academic Calendar Deadlines
+Academic Calendar Deadlines
 Class Nbr	Section	Component	Days & Times	Room	Instructor	Start/End Date
 5336
-105	
+105
 TUT
 F 10:30AM - 11:20AM
 STC 0020
@@ -337,7 +326,7 @@ STC 0020
 To be Announced
 03/13/2026 - 04/03/2026
 5338
-002	
+002
 LEC
 MF 1:30PM - 2:20PM
 STC 0020
@@ -351,15 +340,14 @@ STC 0020
 Dario Peralta Moarry
 03/02/2026 - 04/03/2026
 MATH 119 - Calculus 2 (Eng)
-		
 Status	Units	Grading	Grade	Deadlines
 Enrolled
 0.50
 Numeric Grading Basis
- Academic Calendar Deadlines
+Academic Calendar Deadlines
 Class Nbr	Section	Component	Days & Times	Room	Instructor	Start/End Date
 5899
-002	
+002
 LEC
 MWF 9:30AM - 10:20AM
 STC 0020
@@ -394,7 +382,7 @@ EIT 1015
 Serge D'Alessio
 03/24/2026 - 03/24/2026
 5907
-105	
+105
 TUT
 F 2:30PM - 4:20PM
 RCH 308
@@ -408,22 +396,21 @@ RCH 308
 To be Announced
 03/02/2026 - 04/06/2026
 6521
-201	
+201
 TST
 M 8:30AM - 10:20AM
 TBA
 To be Announced
 02/23/2026 - 02/23/2026
 SE 102 - Seminar
-		
 Status	Units	Grading	Grade	Deadlines
 Enrolled
 0.00
 Non-Graded Component
- Academic Calendar Deadlines
+Academic Calendar Deadlines
 Class Nbr	Section	Component	Days & Times	Room	Instructor	Start/End Date
 7394
-001	
+001
 SEM
 M 3:30PM - 4:20PM
 STC 0020
@@ -436,6 +423,5 @@ M 3:30PM - 4:20PM
 STC 0020
 Kami Vaniea
 03/02/2026 - 04/06/2026
-Printer Friendly Page	
-				
- Go to top iconGo to top
+Printer Friendly Page
+Go to top iconGo to top

@@ -53,14 +53,14 @@ def parse_schedule_text(text: str) -> List[Dict[str, Any]]:
     term_match = re.search(r"(Winter|Spring|Fall)\s+\d{4}", text)
     term = term_match.group(0) if term_match else "Unknown Term"
 
-    course_blocks = re.split(r"\n(?=[A-Z]{2,4}\s\d{3,4}\s-\s)", text)
+    course_blocks = re.split(r"\n(?=[A-Z]{2,8}\s\d{3,4}\s-\s)", text)
 
     day_token = r"(?:M|T|W|Th|F|Sa|Su)+"
-    time_token = r"[\d:AMP ]+-[\d:AMP ]+"
+    time_token = r"\d{1,2}:\d{2}\s*[AP]M\s*-\s*\d{1,2}:\d{2}\s*[AP]M"
     room_token = r"[A-Za-z0-9\- ]+(?:\s-\s[A-Za-z0-9\- ]+)?"
 
     pattern = re.compile(
-        rf"(?P<class_nbr>\d+)\s+(?P<section>\S+)\s+(?P<component>[A-Z]+)\s+"
+        rf"(?m)^(?P<class_nbr>\d+)\s+(?P<section>\S+)\s+(?P<component>[A-Z]+)\s+"
         rf"(?P<days>{day_token})\s+(?P<time>{time_token})\s+"
         rf"(?P<room>{room_token})\s+"
         r"(?P<instructor>.+?)\s+"
@@ -68,14 +68,14 @@ def parse_schedule_text(text: str) -> List[Dict[str, Any]]:
     )
 
     partial_pattern = re.compile(
-        rf"(?P<days>{day_token})\s+(?P<time>{time_token})\s+"
+        rf"(?m)^(?P<days>{day_token})\s+(?P<time>{time_token})\s+"
         rf"(?P<room>{room_token})\s+"
         r"(?P<instructor>.+?)\s+"
         r"(?P<start>\d{2}/\d{2}/\d{4})\s*-\s*(?P<end>\d{2}/\d{2}/\d{4})"
     )
 
     for block in course_blocks:
-        header_match = re.match(r"([A-Z]{2,4}\s\d{3,4})\s-\s(.+)", block.strip())
+        header_match = re.match(r"([A-Z]{2,8}\s\d{3,4})\s-\s(.+)", block.strip())
         if not header_match:
             continue
 

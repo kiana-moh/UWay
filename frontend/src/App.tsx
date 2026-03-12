@@ -71,7 +71,18 @@ function MapPage() {
   const [pendingDate, setPendingDate] = useState(() => formatDate(new Date()));
 
   function formatDate(date: Date) {
-    return date.toISOString().split("T")[0];
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  }
+
+  function parseDateInput(value: string) {
+    const [year, month, day] = value.split("-").map(Number);
+    if (!year || !month || !day) {
+      return new Date(value);
+    }
+    return new Date(year, month - 1, day);
   }
 
   const formatDisplayDate = (date: Date) => {
@@ -432,14 +443,14 @@ function MapPage() {
                     className="primary-btn"
                     onClick={() => {
                       if (!pendingDate) return;
-                      const target = new Date(pendingDate);
+                      const target = parseDateInput(pendingDate);
                       const today = new Date();
                       const diffDays = Math.floor(
                         (target.setHours(0, 0, 0, 0) - today.setHours(0, 0, 0, 0)) /
                           (1000 * 60 * 60 * 24)
                       );
                       setDayOffset(diffDays);
-                      setCurrentDate(new Date(pendingDate));
+                      setCurrentDate(parseDateInput(pendingDate));
                       setSelectedClassIndex(null);
                       setShowDatePicker(false);
                     }}

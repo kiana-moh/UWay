@@ -6,6 +6,7 @@ Finds shortest paths between buildings using Dijkstra's algorithm
 
 import json
 import math
+import re
 from datetime import datetime, date
 from pathlib import Path
 
@@ -159,6 +160,10 @@ def weekday_letter(date_obj: date) -> str:
     }
     return mapping[date_obj.weekday()]
 
+def tokenize_days(days: Optional[str]) -> List[str]:
+    if not days:
+        return []
+    return re.findall(r"Th|Su|Sa|M|T|W|F", days)
 
 
 # Build building map
@@ -196,6 +201,8 @@ def parse_start_time(time_range: Optional[str]) -> datetime:
     if not time_range:
         return datetime.min
     start_str = time_range.split('-', 1)[0].strip()
+    start_str = re.sub(r"^(Th|Su|Sa|M|T|W|F)\\s+", "", start_str)
+    start_str = re.sub(r"(\d)(AM|PM)$", r"\1 \2", start_str, flags=re.IGNORECASE)
     for fmt in ("%I:%M %p", "%H:%M"):
         try:
             return datetime.strptime(start_str, fmt)
@@ -216,7 +223,7 @@ def fetch_schedule_for_date(date_obj: date) -> List[Dict]:
         except (TypeError, ValueError):
             continue
 
-        if weekday not in (entry.get('days') or ''):
+        if weekday not in tokenize_days(entry.get('days')):
             continue
 
         if start_date <= date_obj <= end_date:
