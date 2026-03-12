@@ -85,7 +85,7 @@ const Onboarding: FC<OnboardingProps> = ({ onSubmitICal }) => {
 
       <main className="onboarding-container">
         <header className="animate-fade-in">
-          <h1 className="onboarding-title">Connect your Portal calendar</h1>
+          <h1 className="onboarding-title">Connect your schedule</h1>
           <p className="onboarding-subtitle">
             Just three quick steps and UWay will start mapping routes between
             all your classes.
